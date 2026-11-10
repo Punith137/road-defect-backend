@@ -1,5 +1,8 @@
-fastapi==0.115.0
-uvicorn[standard]==0.30.0
-python-multipart==0.0.9
-ultralytics==8.3.0
-psutil==6.0.0
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+ultralytics
+fastapi
+uvicorn
+python-multipart
+opencv-python-headless
