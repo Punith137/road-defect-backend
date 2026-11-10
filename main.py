@@ -52,6 +52,7 @@ async def sync_client_sd(files: List[UploadFile] = File(...)):
         for file in files:
             if file.filename.lower().endswith((".mp4", ".avi", ".mov", ".mkv")):
                 dest = temp_dir / file.filename
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
                 with open(dest, "wb") as buffer:
                     shutil.copyfileobj(file.file, buffer)
                 saved_paths.append(str(dest))
